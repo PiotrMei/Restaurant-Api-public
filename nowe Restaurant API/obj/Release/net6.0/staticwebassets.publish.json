@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "Hash": "P6Tpb2Erhc+GrMooK1+GLE/1esNsKWLjTcL0/+BijZw=",
+  "Source": "nowe Restaurant API",
+  "BasePath": "_content/nowe Restaurant API",
+  "Mode": "Default",
+  "ManifestType": "Publish",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "nowe Restaurant API\\wwwroot",
+      "Source": "nowe Restaurant API",
+      "ContentRoot": "C:\\Users\\meipi\\source\\repos\\Restaurant\\nowe Restaurant API\\nowe Restaurant API\\nowe Restaurant API\\wwwroot\\",
+      "BasePath": "_content/nowe Restaurant API",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\meipi\\source\\repos\\Restaurant\\nowe Restaurant API\\nowe Restaurant API\\nowe Restaurant API\\wwwroot\\sample.txt",
+      "SourceId": "nowe Restaurant API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\meipi\\source\\repos\\Restaurant\\nowe Restaurant API\\nowe Restaurant API\\nowe Restaurant API\\wwwroot\\",
+      "BasePath": "_content/nowe Restaurant API",
+      "RelativePath": "sample.txt",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\sample.txt"
+    }
+  ]
+}

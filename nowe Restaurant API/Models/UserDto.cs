@@ -1,0 +1,18 @@
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace nowe_Restaurant_API.Models
+{
+    public class UserDto
+    {
+
+        public string Email { get; set; }
+ 
+        public string Password { get; set; }
+        public string ConfirmPassword { get; set; }
+
+        public DateTime? Birthdate { get; set; }
+        public string Nationality { get; set; }
+        
+        public int RoleId { get; set; } = 1;
+    }
+}
