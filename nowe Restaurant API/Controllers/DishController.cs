@@ -50,5 +50,12 @@ namespace nowe_Restaurant_API.Controllers
             dishServices.DeleteDishById(restaurantID, dishId);
             return NoContent();
         }
+
+        [HttpGet]
+        public ActionResult<DishDto> GetDishbyname()
+        {
+            DishDto Dish = new DishDto();
+            return Dish;
+        }
     }
 }
