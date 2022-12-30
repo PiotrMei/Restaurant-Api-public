@@ -13,7 +13,7 @@ namespace nowe_Restaurant_API.Controllers
 
         public DishController(IDishServices dishServices)
         {
-            this.dishServices = dishServices
+            this.dishServices = dishServices;
         }
 
         [HttpPost]
