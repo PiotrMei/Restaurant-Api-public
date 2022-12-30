@@ -51,7 +51,7 @@ namespace nowe_Restaurant_API.Controllers
             return NoContent();
         }
 
-        [HttpGet]
+        [HttpGet("/Dishname")]
         public ActionResult<DishDto> GetDishbyname()
         {
             DishDto Dish = new DishDto();
