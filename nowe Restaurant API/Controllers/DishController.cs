@@ -9,7 +9,7 @@ namespace nowe_Restaurant_API.Controllers
     [ApiController]
     public class DishController : ControllerBase
     {
-        private readonly IDishServices dishServices;
+        private readonly IDishServices dishServices;//aa
 
         public DishController(IDishServices dishServices)
         {
