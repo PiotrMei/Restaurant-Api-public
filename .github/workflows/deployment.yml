@@ -1,0 +1,45 @@
+name: deployment
+on:
+  push:
+    branches:
+    - main
+  workflow_dispatch:
+    
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        dotnet-version: ['6.0.x' ]
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup .NET Core SDK ${{ matrix.dotnet-version }}
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: ${{ matrix.dotnet-version }}
+      - name: Install dependencies
+        run: dotnet restore
+      - name: Build
+        run: dotnet build --configuration Release --no-restore  
+      - name: Publish
+        run: dotnet publish -c Release -o ${{ env.DOTNET_ROOT }}/api
+      - name: Upload a Build Artifact
+        uses: actions/upload-artifact@v3.1.1
+        with:
+         name: api-artifact
+         path: ${{ env.DOTNET_ROOT }}/api
+  deploy-dev:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+    - name: Download a Build Artifact
+      uses: actions/download-artifact@v3.0.1
+      with:
+       name: api-artifact
+    - name: Azure WebApp
+      uses: Azure/webapps-deploy@v2.2.5
+      with:
+       app-name: 'restaurant-api-app-new'
+       publish-profile:
