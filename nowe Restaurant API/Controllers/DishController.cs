@@ -55,7 +55,7 @@ namespace nowe_Restaurant_API.Controllers
         public ActionResult<DishDto> GetDishbyname()
         {
             DishDto Dish = new DishDto();
-            return Dish;
+            return Ok(Dish);
             //aaa
             //bbbb
         }
