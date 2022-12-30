@@ -42,4 +42,4 @@ jobs:
       uses: Azure/webapps-deploy@v2.2.5
       with:
        app-name: 'restaurant-api-app-new'
-       publish-profile:
+       publish-profile: ${{secrets.PROFILE_SECRET}}
