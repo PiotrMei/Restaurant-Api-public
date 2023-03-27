@@ -10,5 +10,6 @@ namespace nowe_Restaurant_API.Models
         public decimal Price { get; set; }
 
         public int RestaurantId { get; set; }
+        
     }
 }
