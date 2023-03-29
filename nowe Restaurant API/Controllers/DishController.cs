@@ -9,7 +9,7 @@ namespace nowe_Restaurant_API.Controllers
     [ApiController]
     public class DishController : ControllerBase
     {
-        private readonly IDishServices dishServices;
+        private readonly IDishServices dishServices;//aa
 
         public DishController(IDishServices dishServices)
         {
@@ -51,13 +51,13 @@ namespace nowe_Restaurant_API.Controllers
             return NoContent();
         }
 
-        //[HttpGet]
-        //public ActionResult<DishDto> GetDishbyname()
-        //{
-        //    DishDto Dish = new DishDto();
-        //    return Dish;
-        //    //aaa
-        //    //bbbb
-        //}
+        [HttpGet]
+        public ActionResult<DishDto> GetDishbyname()
+        {
+            DishDto Dish = new DishDto();
+            return Dish;
+            //aaa
+            //bbbb
+        }
     }
 }
