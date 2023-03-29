@@ -51,13 +51,13 @@ namespace nowe_Restaurant_API.Controllers
             return NoContent();
         }
 
-        [HttpGet]
-        public ActionResult<DishDto> GetDishbyname()
-        {
-            DishDto Dish = new DishDto();
-            return Dish;
-            //aaa
-            //bbbb
-        }
+        //[HttpGet]
+        //public ActionResult<DishDto> GetDishbyname()
+        //{
+        //    DishDto Dish = new DishDto();
+        //    return Dish;
+        //    //aaa
+        //    //bbbb
+        //}
     }
 }
